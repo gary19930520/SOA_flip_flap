@@ -1,5 +1,5 @@
 ## FlipFlap HW
-hihi123
+
 ###Overview
 
 This homework assignment asks you to create two files (a module and a class) that
