@@ -26,6 +26,19 @@ module TsvBuddy
   # to_tsv: converts @data into tsv string
   # returns: String in TSV format
   def to_tsv
-
+    output_str = ''
+    @data.each_with_index do |item, itemIdx|
+      first_flag = true
+      tmp_str = ''
+      item.each do |key, value|
+        output_str += first_flag ? "#{key}" : "\t#{key}" if itemIdx == 0
+        tmp_str += first_flag ? "#{value}" : "\t#{value}"
+        first_flag = false
+        # p value
+      end
+      output_str += "\n" if itemIdx == 0
+      output_str += "#{tmp_str}\n"
+    end
+    output_str
   end
 end
