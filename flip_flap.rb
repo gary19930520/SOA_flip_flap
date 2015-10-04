@@ -5,7 +5,7 @@ class FlipFlap
   include TsvBuddy
   # Do NOT create an initialize method
   def take_yaml(yaml)
-  	
+  	@data = YAML.load(yaml)
   end
 
   def to_yaml
