@@ -1,4 +1,5 @@
 require_relative 'tsv_buddy'
+require 'yaml'
 
 class FlipFlap
   include TsvBuddy
@@ -8,6 +9,6 @@ class FlipFlap
   end
 
   def to_yaml
-  	
+  	@data.to_yaml # call yaml library and export
   end
 end
