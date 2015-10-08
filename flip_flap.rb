@@ -1,14 +1,9 @@
 require_relative 'tsv_buddy'
+require_relative 'yaml_buddy'
 require 'yaml'
 
 class FlipFlap
   include TsvBuddy
+  include YamlBuddy
   # Do NOT create an initialize method
-  def take_yaml(yaml)
-  	@data = YAML.load(yaml)
-  end
-
-  def to_yaml
-  	@data.to_yaml # call yaml library and export
-  end
 end
